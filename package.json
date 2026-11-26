@@ -1,0 +1,17 @@
+{
+  "name": "madad-b2b",
+  "version": "1.0.0",
+  "private": true,
+  "description": "منصة مدد - B2B Pharma Marketplace for Omdurman",
+  "scripts": {
+    "build": "npm --prefix backend run build && npm --prefix frontend run build",
+    "build:backend": "npm --prefix backend run build",
+    "build:frontend": "npm --prefix frontend run build",
+    "start:backend": "npm --prefix backend start",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
