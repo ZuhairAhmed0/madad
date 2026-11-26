@@ -55,7 +55,10 @@ export const updateWatchlistHandler: RequestHandler = async (req, res) => {
   res.status(200).json(result);
 };
 
-export const acknowledgeWatchlistHandler: RequestHandler = async (req, res) => {
+export const acknowledgeWatchlistHandler: RequestHandler = async (
+  req: Request,
+  res
+) => {
   const pharmacyId = requirePharmacyId(req);
   const { id, customShelfPriceSdg } = acknowledgeWatchlistSchema.parse({
     id: req.params.id,
@@ -69,7 +72,10 @@ export const acknowledgeWatchlistHandler: RequestHandler = async (req, res) => {
   res.status(200).json(result);
 };
 
-export const deleteWatchlistHandler: RequestHandler = async (req, res) => {
+export const deleteWatchlistHandler: RequestHandler = async (
+  req: Request,
+  res
+) => {
   const pharmacyId = requirePharmacyId(req);
   const { id } = watchlistIdParamSchema.parse({ id: req.params.id });
   const result = await watchlistService.deleteWatchlistItem(pharmacyId, id);
